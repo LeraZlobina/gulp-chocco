@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    //margin-bottom: 5.666667rem;
+
+    
+
+}
+
+.phone.header__phone {
+    @include tablets {
+        display: none;
+    }
+}

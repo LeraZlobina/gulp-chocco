@@ -1,0 +1,11 @@
+.bullets {
+    display: flex;
+    &__item {
+        margin-right: 2.555556rem;
+       
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }   
+}

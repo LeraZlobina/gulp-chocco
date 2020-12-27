@@ -1,0 +1,195 @@
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+
+
+    &-section {
+        position: relative;
+        background: url(images/img/Strawberry.png) right top 8% no-repeat;
+
+        &::before{
+            position: absolute;
+            content: url(images/img/pattern-two.png) ;
+            left: 0;
+            bottom: -9.055556rem;
+
+            @include phones {
+                content: url(images/img/pattern-six.png) ;
+                bottom: -5.888889rem;
+            }
+
+            @include iphone-5 {
+                transform: scale(0.8);
+                left: -0.833333rem;
+                bottom: -9.055556rem;
+
+            }
+        }
+
+        &::after{
+            position: absolute;
+            content: url(images/img/berries-two.png) ;
+            left: 0;
+            bottom: -5.055556rem;
+
+            @include phones {
+                content: url(images/img/berries-three.png) ;
+                bottom: -3.833333rem;
+
+            }
+
+            @include iphone-5 {
+                transform: scale(0.7);
+                left: -0.833333rem;
+                bottom: -5.666667rem;
+
+            }
+
+
+        }
+
+        @include phones {
+            background-image: url(images/img/strawberry-two.png) ;
+            background-position: right top;
+        }
+
+        @include iphone-5 {
+            background-size: 4.333333rem 2.666667rem;
+        }
+
+
+
+        
+    }
+
+
+    &__title{
+        margin-bottom: 1.444444rem;
+
+        @include tablets {
+            margin-bottom: 2.277778rem;
+        }
+    }
+
+    &__content {
+        background: #f8faf9 url(images/img/pattern-five.png) right top no-repeat;
+        padding: 2.722222rem 10.5rem 2.5rem 2.055556rem;
+        margin-bottom: 1.166667rem;
+        overflow: hidden;
+        position: relative;
+
+        @include tablets {
+            padding: 2.722222rem 1.333333rem 2.055556rem;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -3.611111rem;
+        }
+    }
+
+
+    &__list {
+        position: relative;
+        min-height: 295px;
+    }
+
+    &__item {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: .3s;
+
+        
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+        }
+    }
+
+
+
+    &__photo {
+        width: 14.111111rem;
+        height: 14.333333rem;
+
+       @include tablets {
+           width: 7.647058rem;
+           height: 7.823529rem;
+           margin-bottom: 1.388889rem;
+       }
+
+        &-pic{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__desc {
+        flex: 1;
+        margin-left: 1rem;
+        padding-top: 0.5rem;
+
+        @include tablets {
+            padding-top: 0;
+            margin-left: 0;
+        }
+ 
+
+        &-title {
+            font-size: 1.666667rem;
+            font-weight: bold;
+            margin-bottom: 0.944444rem;
+            color: black;
+
+            @include tablets {
+                margin-bottom: 0.611111rem;
+            }
+        }
+
+        &-text {
+            margin-bottom: 1.166667rem;
+            //max-width: 24.666667rem;
+            line-height: 1.3;
+            
+            @include tablets {
+                margin-bottom: 0.888889rem;
+            }
+        }
+
+        &-username {
+            font-weight: bold;
+            color: black;
+        }
+    }
+
+    &__user {
+        display: inline-flex;
+        justify-content: center;
+    }
+    
+}
+
+.reviews__item.active {
+    position: static;
+    opacity: 1;
+
+}

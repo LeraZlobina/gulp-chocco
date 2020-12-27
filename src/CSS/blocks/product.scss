@@ -1,0 +1,110 @@
+.product {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    @include tablets {
+        text-align: center;
+        margin-top: -2.764705rem;
+    }
+    
+
+    &__header {
+        margin-bottom: 1.611111rem;
+        display: flex;
+        justify-content: flex-start;
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &__header-link {
+        height: 5.055556rem;
+        width: 5.055556rem;
+        background: #86C3D7;
+        border-radius: 0.222222rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        
+
+        .header__link-pic {
+            width: 2.555556rem;
+            height: 2.555556rem;
+            fill: white;
+        }
+
+        .header__link-text {
+            font-size: 0.777778rem;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+    &__header-link:hover .product__header-composition {
+        display: flex;
+    }
+
+    &-title {
+        font-size: 2rem;
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 0.722222rem;
+
+        @include tablets {
+            font-size: 1.764705rem;
+            margin-bottom: 0.764705rem;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+        @include tablets {
+            align-items: center;
+        }
+    }
+
+    &-subtitle {
+        width: 78%;
+        margin-bottom: 2.111111rem;
+        line-height: 1.2;
+
+        @include tablets {
+            line-height: 1.3;
+            margin-bottom: 0.882352rem;
+        }
+
+    }
+
+    &__desc {
+        display: flex;
+        margin-bottom: 1.444444rem;
+
+        @include tablets {
+            margin-bottom: 1.941176rem;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 2.888889rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__specifications {
+        font-weight: bold;
+    }
+}
+

@@ -1,0 +1,19 @@
+.buy {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__price {
+        font-size: 3.333333rem;
+        margin-right: 1.722222rem;
+        line-height: 1;
+        font-weight: lighter;
+    }
+
+    &__btn {
+        padding: 1.111111rem 2.333333rem;
+
+        @include tablets {
+            padding: 1.058823rem 2.117647rem;
+        }
+    }
+}

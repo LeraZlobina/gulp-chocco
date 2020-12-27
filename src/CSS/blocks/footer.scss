@@ -1,0 +1,23 @@
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 23px 0;
+    background: white;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include phones {
+            flex-direction: column;
+        }
+    }
+
+    
+
+    
+
+}

@@ -1,0 +1,63 @@
+.btn { 
+    border-radius: 5.555556rem;
+    padding: 1rem 2.388889rem;
+    color: #365A49;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 0.888889rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+        border-color: #DEE2BD;
+        outline: none;
+    }
+
+    @include tablets {
+        font-size: 1.055556rem;
+        padding: 0.944444rem 2.055556rem;
+    }
+
+    @include phones {
+        padding: 1rem 2.388889rem;
+    }
+
+
+    &:hover{
+    transition: .3s;
+    }
+
+    &--color--white {
+        background: white;
+        
+    }
+
+    &--color--white:hover {
+        background: #497870;
+        color: white;
+    }
+
+    &--color--green {
+        background: #2E4E3F;
+        color: white;
+    }
+
+    &--color--green:hover {
+        color: #365A49;
+        background: white;
+    }
+
+    &--color--transparent {
+        background: transparent;
+        color: black;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    &--color--transparent:hover {
+        color: #365A49;
+    }
+}

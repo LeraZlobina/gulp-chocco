@@ -1,0 +1,67 @@
+.advantages {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+
+    &-section {
+        position: relative;
+        background: url(images/img/pattern-three.png) left top 55% no-repeat;
+
+        @include tablets {
+            background-position: left top 10%;
+        }
+
+        @include phones {
+            background: none;
+        }
+
+        &::before {
+            content: url(images/img/raspberry.png);
+            position: absolute;
+            left: 0;
+            bottom: -6.277778rem;
+
+            @include phones {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        flex: 1;
+        padding: 0 3%;
+        position: relative;
+
+        @include phones {
+            padding: 0;
+            margin-bottom: 0.888889rem;
+
+        }
+
+        &::before {
+            content: url(images/img/points.png);
+            position: absolute;
+            top: 2.777778rem;
+            right: 0;
+            transform: translateX(50%);
+
+            @include phones {
+                display: none;
+            }
+        }
+    }
+
+    &__item:first-child {
+        padding-left: 0;
+    }
+
+    &__item:last-child {
+        padding-right: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}

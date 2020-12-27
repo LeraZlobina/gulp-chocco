@@ -1,0 +1,113 @@
+.shop {
+
+    &-section {
+        background: #F8FAF9;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url(images/img/pattern-four.png) ;
+            right: 0;
+            bottom: -13.444444rem;
+
+            @include tablets {
+                transform: scale(0.8);
+                right: -1.111111rem;
+            }
+
+            @include phones {
+                content: url(images/img/pattern-seven.png);
+                bottom: -9.5rem;
+                right: -0.125rem;
+                transform: scale(1.0);
+
+            }
+
+            @include iphone-5 {
+                transform: scale(0.7);
+                right: -1.35714rem;
+                bottom: -11.444444rem;
+                
+
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: url(images/img/blueberry-two.png) ;
+            right: 2%;
+            bottom: -5rem;
+
+            @include tablets {
+                transform: scale(0.8);
+                right: 0;
+            }
+
+            @include phones {
+                right: -2rem;
+                transform: scale(0.7);
+            }
+
+            @include iphone-5 {
+                transform: scale(0.5);
+                right: -3rem;
+            }
+        }
+    
+        
+    }
+
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        @include phones {
+            width: 93%;
+        }
+
+        .bx-wrapper {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+
+
+    &__arrow{
+        display: flex;
+        align-items: center;
+    
+        &-pic {
+            width: 0.722222rem;
+            height: 1.5rem;
+
+            &--rotate{
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+
+    &__item {
+        display: flex;
+
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+
+    &__photo {
+        display: flex;
+        align-items: center;
+
+        @include tablets {
+            justify-content: center;
+            transform: scale(0.8);
+        }
+    }
+
+}
+
+
+
+

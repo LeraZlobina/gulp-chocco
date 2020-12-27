@@ -1,0 +1,35 @@
+.section{
+    //height: 100vh;
+    height: 100%;
+    min-height: 36.055556rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        font-size: 2.666667rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 2.055556rem;
+        text-align: center;
+
+        @include tablets {
+            margin-bottom: 1.388889rem;
+        }
+
+        @include phones {
+            margin-bottom: 1rem;
+
+        }
+    }
+
+    &__title--color-green {
+        color: #365A49;
+    }
+
+    &--font--color--green {
+        color: #497870;
+    }
+}

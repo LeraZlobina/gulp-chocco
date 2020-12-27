@@ -1,0 +1,19 @@
+.bullet {
+    display: flex;
+
+    &__icon {
+        width: 2.5rem;
+        margin-right: 0.5rem;
+
+        &-pic {
+            fill: white;
+            width: 2.277778rem;
+            height: 2.277778rem;
+        }
+    }
+
+    &__text {
+        font-size: 0.888889rem;
+        max-width: 4.722222rem;
+    }
+}

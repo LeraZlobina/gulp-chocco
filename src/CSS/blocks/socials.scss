@@ -1,0 +1,33 @@
+.socials {
+    &__item {
+        display: inline-flex;
+        vertical-align: middle;
+        margin-right: 0.833333rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        width: 1.111111rem;
+        height: 1.111111rem;
+        /*position: relative;
+        display: flex;*/
+    }
+
+    &__icon {
+        /*position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+        width: 1.111111rem;
+        height: 1.111111rem;
+        fill: #B3B3B3;
+
+        &:hover {
+            fill: black;
+            transition: .3s;
+        }
+    }
+}

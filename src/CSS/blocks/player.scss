@@ -1,0 +1,199 @@
+.player {
+    position: relative;
+    max-width: 36.666667rem;
+
+    @include tablets {
+        max-width: 33rem;
+    }
+
+    @include phones {
+        max-width: 21.888889rem;
+
+    }
+
+    &-section {
+        background: #F8FAF9;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+
+
+            .player__elem{
+                @include tablets {
+                    max-height: 19.444444rem;
+                }
+        
+                @include phones {
+                 max-height: 12.944444rem;
+        
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        @include tablets {
+            max-height: 19.444444rem;
+        }
+
+        @include phones {
+         max-height: 12.944444rem;
+
+        }
+    }
+
+    &__splash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(images/img/player.png) center center/cover no-repeat;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            background: url(images/img/play.png) center center/contain no-repeat;
+            position: absolute;
+            width: 5rem;
+            height: 6.875rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            @include phones {
+                width: 3.125rem;
+                height: 5rem;
+            }
+            
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 25px;
+        height: 35px;
+        background: #404040;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablets {
+            padding: 0 15px;
+        }
+    
+        @include phones {
+            padding: 0 5px;
+            
+        }
+    }
+
+    &.active .player__splash {
+        display: none;
+    }
+
+    &.paused {
+        .player__start {
+            width: 14px;
+            height: 17px;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 5px;
+                top: 0;
+                bottom: 0;
+                background: #626262;
+                
+            }
+
+            &::before{
+                margin-right: 3px;
+                left: 0;
+            }
+
+            &::after{
+                right: 0;
+            }
+
+        }
+    }
+
+    &__start {
+        border: transparent;
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+
+        &::before{
+            content: url(images/img/playy.png);
+            width: 14px;
+            height: 17px;
+            display: flex;
+        }
+    }
+
+    &__playback {
+        width: 24.777778rem;
+        height: .888889rem;
+        position: relative;
+
+        @include tablets {
+            width: 22.222222rem;
+        }
+    
+        @include phones {
+            width: 14.375rem;
+            
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            height: 4px;
+            background: #626262;
+            display: block;
+            cursor: pointer;
+        }
+
+        &-button {
+            border: none;
+            width: .9375rem;
+            height: .9375rem;
+            border-radius: 50%;
+            background: #626262;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        
+            @include phones {
+                width: .75rem;
+                height: .75rem;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__duration {
+        @include phones {
+            font-size: .8125rem;
+        }
+    }
+}

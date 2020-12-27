@@ -1,0 +1,33 @@
+.fullscreen-menu {
+    display: none;
+    
+
+    &__close {
+        @include tablets{
+            position: fixed;
+            top: 2.888889rem;
+            right: 2.888889rem;
+        }
+        
+        .close__icon {
+            @include tablets {
+                width: 1.111111rem;
+                height: 1.111111rem;
+                fill: white;
+            }
+
+        }
+    }
+
+    @include tablets {
+        position: fixed;
+        background: #333537;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        min-height: 36.055556rem;
+
+    }
+}

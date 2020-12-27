@@ -1,0 +1,54 @@
+.advantage {
+    text-align: center;
+
+    @include phones {
+        display: flex;
+        text-align: left;
+    }
+    
+    &__icon {
+        margin-bottom: 0.888889rem;
+
+        @include phones {
+            margin-bottom: 0;
+            margin-right: 0.833333rem;
+        }
+        
+        &-pic {
+            fill: black;
+            width: 4.166667rem;
+            height: 3.833333rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__icon-wrapper {
+        display: inline-block;
+        width: 7rem;
+        height: 7rem;
+        position: relative;
+        background: #f2f5f4;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 0.888889rem;
+
+        @include phones {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    &__desc {
+        line-height: 1.2;
+        font-weight: 300;
+    }
+}

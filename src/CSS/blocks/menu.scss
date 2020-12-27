@@ -1,0 +1,60 @@
+.menu {
+    margin: 0 1.666667rem;
+    padding-top: 0.277778rem;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-bottom: 0.555556rem;
+        margin-right: 1.333333rem;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }   
+
+    &__link {
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+            transition: .3s;
+
+        }
+    }
+
+    @include tablets {
+        display: none;  
+
+    }
+
+    &--vertical {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+
+        @include tablets {
+            display: flex;  
+    
+        }
+
+    }
+    
+    &--vertical > .menu__list {
+        flex-direction: column;
+    }
+    
+    &--vertical > .menu__list > .menu__item{
+        margin-right: 0;
+        margin-bottom: 1.166667rem;
+
+    }
+}

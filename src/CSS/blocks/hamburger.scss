@@ -1,0 +1,15 @@
+.hamburger {
+    width: 24px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+
+    @include tablets {
+        display: inline-flex;
+    }
+
+    &__icon {
+        fill: white;
+    }
+}

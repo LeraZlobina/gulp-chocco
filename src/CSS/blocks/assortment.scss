@@ -1,0 +1,155 @@
+.assortment {
+    color: white;
+    font-size: 2.666667rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 16.666667rem;
+    top: 0;
+    transform-origin: top right;
+    transform: rotate(-90deg);
+
+    @include tablets {
+        right: 15.666666rem;
+    }
+
+    @include phones {
+        right: 13.333333rem;
+    }
+
+    @include iphone-5 {
+        right: 11.666667rem;
+    }
+
+    &__item {
+        display: flex;
+        width: 100vh;
+        height: 5.555556rem;
+        align-items: center;
+        position: relative;
+        padding-left: 2.222222rem;
+    
+        @include tablets {
+            height: 5.222222rem;
+        }
+        
+        @include phones {
+            height: 4.444444rem;
+        }
+
+        @include iphone-5 {
+            height: 3.888889rem;
+        }
+
+        &:first-child::before {
+            content: '';
+            background: url(images/img/bgg-three.png) no-repeat 51% 24%;
+            filter: brightness(0.5);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &:nth-child(2)::before {
+            content: '';
+            background: url(images/img/bg-four.png) no-repeat 29% 26%;
+            filter: brightness(0.5);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &:last-child::before {
+            content: '';
+            background: url(images/img/bgg-five.png) no-repeat 69% 84%;
+            filter: brightness(0.5);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &-section{
+        position: relative;
+    }
+
+    &-section::before {
+        content: '';
+        background: url(images/img/bg-two.png) 50% 50% / cover no-repeat;
+        opacity: 0.8;
+        filter: brightness(0.8);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        
+    }
+
+    
+
+    &__desc {
+        transform: rotate(90deg);
+        transform-origin: top left;
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 0;
+        overflow: hidden;
+        font-size: 16px;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        background: rgba(51, 53, 55, 0.9);
+
+        @include phones {
+            font-size: .777778rem;
+
+        }
+
+    }
+
+    &__text {
+        padding: 1.666667rem 2.222222rem 0;
+        
+        @include phones {
+            padding: 1.666667rem .5rem 0;
+
+        }
+
+    }
+}
+
+.section__title.assortment__title{
+    color: white;
+    position: absolute;
+    top: 11%;
+    left: 11%;
+    margin-bottom: 0;
+
+    @include tablets {
+        left: 5%;
+    }
+
+    @include phones {
+        left: 2%;
+        font-size: 2.222222rem;
+
+    }
+
+    @include iphone-5 {
+        left: 1%;
+    }
+}
+
