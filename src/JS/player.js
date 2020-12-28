@@ -106,7 +106,7 @@ function onYouTubeIframeAPIReady() {
         rel: 0,
         autoplay: 0,
         enablejsapi: 1,
-        origin: 'https://lerazlobina.github.io/gulp-chocco/dist/index.html',
+        origin: 'https://lerazlobina.github.io',
         modestbranding: 0
       }
     });
