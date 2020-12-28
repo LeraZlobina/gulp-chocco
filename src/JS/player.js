@@ -105,6 +105,8 @@ function onYouTubeIframeAPIReady() {
         showinfo: 0,
         rel: 0,
         autoplay: 0,
+        enablejsapi: 1,
+        origin: 'https://lerazlobina.github.io',
         modestbranding: 0
       }
     });
