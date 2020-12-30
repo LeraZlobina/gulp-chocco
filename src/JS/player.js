@@ -90,43 +90,5 @@ const onPlayerStateChange = e => {
     }
 }
 
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player("yt-player", {
-      height: "405",
-      width: "660",
-      videoId: "LXb3EKWsInQ",
-      events: {
-        onReady: onPlayerReady,
-        onStateChange: onPlayerStateChange
-      },
-      playerVars: {
-        controls: 0,
-        disablekb: 1,
-        showinfo: 0,
-        rel: 0,
-        autoplay: 0,
-        enablejsapi: 1,
-        origin: 'https://lerazlobina.github.io',
-        modestbranding: 0
-      }
-    });
-};
-
 eventsInit();
 
-/*const num = $(window).width();
-const controls = $('.player__controls');
-const line = $('.player__playback');
-
-
-if (num < 600) {
-    playerContainer.width('21.888889rem');
-    playerContainer.height('12.944444rem');
-    controls.css({'padding':'0 5'});
-    line.width('14.722222rem');
-} else {
-    playerContainer.width('33rem');
-    playerContainer.height('19.444444rem');
-    controls.css({'padding':'0 15'});
-    line.width('22.222222rem');
-}*/
