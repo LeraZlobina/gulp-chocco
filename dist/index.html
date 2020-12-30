@@ -691,7 +691,8 @@
                     </div>
                 </div>
             </section>
-            <section data-sidemenu-theme="white" data-section-id="delivery" class="section form-section section--font--color--green">
+            <section data-sidemenu-theme="white" data-section-id="delivery"
+                class="section form-section section--font--color--green">
                 <div class="container">
                     <h1 class="section__title section__title--color-green">закажите доставку</h1>
                     <form class="form">
@@ -890,10 +891,33 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="main.min.js"></script>
+    <script>
+        window.onYouTubeIframeAPIReady = function () {
+            player = new YT.Player("yt-player", {
+                height: "405",
+                width: "660",
+                videoId: "LXb3EKWsInQ",
+                events: {
+                    onReady: onPlayerReady,
+                    onStateChange: onPlayerStateChange
+                },
+                playerVars: {
+                    controls: 0,
+                    disablekb: 1,
+                    showinfo: 0,
+                    rel: 0,
+                    autoplay: 0,
+                    enablejsapi: 1,
+                    origin: 'https://lerazlobina.github.io',
+                    modestbranding: 0
+                }
+            });
+        };
+    </script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
